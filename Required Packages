@@ -1,0 +1,7 @@
+1. Python-tesseract is an optical character recognition (OCR) tool for python.
+pip install pytesseract
+Link to download the tesseract application.
+http://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-setup-4.00.00dev.exe
+
+2. easyocr 1.1.10 OCR with 70+ languages supported including Chinese, Japanese, Korean and Thai.
+pip install easyocr
