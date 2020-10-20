@@ -9,17 +9,22 @@ file_path= r"F:\VDO-AD-100_37.jpg"
 #Reading the imageusing using cv2
 img = cv2.imread(file_path,0)
 #use below lines to print the image
-#cv2.imshow("imgage_window",img)
+#cv2.imshow("image_window_1",img)
 #cv2.waitKey(0)
 #cv2.destroyAllWindows()
 
+#converting the colored image to gray scale
+Gray_image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+
+
 #if the image has different illuminnation use the below thresholding line
-#img=cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,93,11)
+#img=cv2.adaptiveThreshold(Gray_image,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,93,11)
 
 #extracting the text from the image.
 #make sure that the path of pytesseract.exe file is correct.
 pytesseract.pytesseract.tesseract_cmd=r"C:\Users\XYZ\Tesseract-OCR\tesseract.exe"
-text = pytesseract.image_to_string(img)
+text = pytesseract.image_to_string(Gray_image)
+
 #print to check the output text.
 print(text)
 
