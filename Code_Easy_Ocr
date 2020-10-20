@@ -3,7 +3,7 @@ import PIL
 import easyocr
 from PIL import ImageDraw
 
-#Path of image file
+#Path of Gray_image file
 Img_path=r"/content/drive/Text_ocr/sample2.jpg"
 im = PIL.Image.open(Img_path)
 #uncomment to print the image
